@@ -37,6 +37,10 @@ mongoose
     console.log(err);
   });
 
+
+  app.get('/', (req, res)=>{
+    res.send('Welcome to my Api')
+  })
 ///gey all todos
 app.get("/todos", async (req, res) => {
   const todoModel = await TodoModel.Find({});
